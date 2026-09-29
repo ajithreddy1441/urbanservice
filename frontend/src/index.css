@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --brand: #2563eb;
+  --ink: #0f172a;
+  --canvas: #f4f7fb;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+  color-scheme: light;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+html, body, #root { min-height: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+button, input, select, textarea { font: inherit; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes ken {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.rise { animation: rise .35s ease both; }
+.fade-up { animation: fade-up .8s cubic-bezier(.2,.7,.2,1) both; }
+.ken { animation: ken 14s ease-out both; }
+.floaty { animation: floaty 6s ease-in-out infinite; }
+.hover-lift {
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px -28px rgba(15, 23, 42, .55);
+}
+.img-zoom img { transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.img-zoom:hover img { transform: scale(1.08); }

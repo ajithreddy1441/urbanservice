@@ -1,0 +1,14 @@
+-- Urban Services demo data is created by the Node seeder so passwords are hashed
+-- with bcrypt and historical orders, earnings, and reviews stay consistent.
+--
+-- From the backend folder, after configuring .env:
+--   npm run seed
+--
+-- The seeder applies schema.sql and loads:
+--   admin@urbanservices.com      / Admin@123
+--   raj@urbanservices.com        / Customer@123
+--   priya@urbanservices.com      / Customer@123
+--   ramesh@urbanservices.com     / Tech@123
+--   suresh@urbanservices.com     / Tech@123
+--   anita@urbanservices.com      / Tech@123
+--   kiran@urbanservices.com      / Tech@123   (pending approval)

@@ -1,0 +1,6 @@
+-- Initial migration. Select the target database, then apply:
+--   mysql -u YOUR_USER -p YOUR_DATABASE < database/schema.sql
+-- On Hostinger, import database/schema.sql inside the database created in hPanel.
+--
+-- Demo data:
+--   cd backend && npm run seed
