@@ -8,7 +8,7 @@ export const pool = mysql.createPool({
   password: env.db.password,
   database: env.db.database,
   waitForConnections: true,
-  connectionLimit: 10,
+  connectionLimit: process.env.VERCEL ? 3 : 10,
   namedPlaceholders: false,
   decimalNumbers: true,
   timezone: '+05:30',
